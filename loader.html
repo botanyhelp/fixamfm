@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% block bodycontent %}
+{% if user %} 
+   <p> Welcome, {{ user.email() }}! 
+   You can <a href="{{ logout_url }}">sign out</a>. 
+   </p> 
+{% else %} 
+   <p> Welcome! <a href="{{ login_url }}">Sign in</a> 
+   </p> 
+{% endif %}
+      <p>Load all stations and one request each.
+      </p>
+      <p>Be sure to allow up to one minute for the click to finish and return to this page. Its okay to rerun these loaders because the recreation of the Station entity won't change anything about that record because every property including its key_name will be the same.  Although it will db.put() each Station again.  Recreation of the Radiorequest entities will occur again and will increase the total number of records because they are created with the automatic key.  
+      </p>
+       <p>
+       {{ xtrahtml }}
+       </p>
+
+{% endblock %}
+

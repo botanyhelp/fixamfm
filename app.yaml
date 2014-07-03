@@ -1,0 +1,24 @@
+application: fixamfm
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers: 
+- url: /stations
+  static_dir: stations
+- url: /images
+  static_dir: images
+- url: /loaders/.*
+  script: loaders.application
+  login: admin
+- url: .*
+  script: main.application
+
+libraries:
+- name: jinja2
+  version: latest
+- name: markupsafe
+  version: latest
+- name: lxml
+  version: latest

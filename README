@@ -1,0 +1,15 @@
+fixamfm is a google app engine python web application 
+
+It allows client to submit a request to any radio station.  Radio stations can monitor these requests in this same app. 
+
+The profanity filter benefited from the list of bad words at CMU:
+
+www.cs.cmu.edu/~biglou/resources/bad-words.txt
+
+That list is good except that okay words like 'fire' are in there.  A request like this: '''The Doors, Light My Fire''' will go in like this '''The Doors, Light My ____'''.  This list was appended to with other unwanted items like @, http, https, ftp, and a few others.  
+
+The list of stations was pulled from wikipedia.  All of that data is shared under this license:
+
+Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. 
+http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+
