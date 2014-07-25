@@ -1,0 +1,43 @@
+fixamfm# python /usr/local/google_appengine/appcfg.py update .
+03:08 PM Application: fixamfm; version: 1
+03:08 PM Host: appengine.google.com
+03:08 PM 
+Starting update of app: fixamfm, version: 1
+03:08 PM Getting current resource limits.
+03:08 PM Scanning files on local disk.
+Could not guess mimetype for stations/stations.  Using application/octet-stream.
+Could not guess mimetype for stations/stations.sqlite3.  Using application/octet-stream.
+03:08 PM Scanned 500 files.
+03:08 PM Scanned 1000 files.
+03:08 PM Scanned 1500 files.
+03:08 PM Scanned 2000 files.
+03:08 PM Scanned 2500 files.
+03:08 PM Scanned 3000 files.
+03:08 PM Scanned 3500 files.
+03:08 PM Scanned 4000 files.
+03:08 PM Scanned 4500 files.
+03:08 PM Scanned 5000 files.
+03:08 PM Scanned 5500 files.
+03:08 PM Scanned 6000 files.
+03:08 PM Scanned 6500 files.
+03:08 PM Scanned 7000 files.
+03:08 PM Scanned 7500 files.
+03:08 PM Scanned 8000 files.
+Could not guess mimetype for stations/stations.sqlite3.  Using application/octet-stream.
+Could not guess mimetype for stations/stations.  Using application/octet-stream.
+03:08 PM Cloning 8413 static files.
+03:08 PM Cloned 2000 files.
+03:08 PM Cloned 4000 files.
+03:08 PM Cloned 6000 files.
+03:08 PM Cloned 8000 files.
+03:09 PM Cloning 62 application files.
+03:09 PM Uploading 1 files and blobs.
+03:09 PM Uploaded 1 files and blobs
+03:09 PM Compilation starting.
+03:09 PM Compilation completed.
+03:09 PM Starting deployment.
+03:09 PM Checking if deployment succeeded.
+03:09 PM Deployment successful.
+03:09 PM Checking if updated app version is serving.
+03:09 PM Completed update of app: fixamfm, version: 1
+03:09 PM Uploading index definitions.

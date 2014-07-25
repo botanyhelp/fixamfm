@@ -407,7 +407,15 @@ class RadiorequestHandler(webapp2.RequestHandler):
         #  they read this code, their robot would still have to know the order of the list 
         #  in AddHandler.images and use it to guess the answer to the 3-digit captcha 
         #  challenge.
-        captcha=randint(1,15594)
+        #captcha=randint(1,15594)
+        #BECAUSE google app engine limits total number of files to 10,000, our images 
+        # folder is too big, and so all of these files were removed:
+        # fixamfm/images# rm -f n* o* p* q* r* s* t* u* v* w* x* y* z*
+        # leaving us with 8407 files
+        # fixamfm/images# ls *.png|wc
+        # 8407    8407   67254
+        #captcha=randint(1,15594)
+        captcha=randint(1,8300)
         captcha_index=captcha+int(datetime.datetime.today().day)
         #WORKS, if self.images refers to a class variable in this class
         #imgString=self.images[captcha_index]+'.png'

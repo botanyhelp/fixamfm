@@ -1,0 +1,81 @@
+fixamfm# python /usr/local/google_appengine/appcfg.py update .
+02:10 PM Application: fixamfm; version: 1
+02:10 PM Host: appengine.google.com
+02:10 PM 
+Starting update of app: fixamfm, version: 1
+02:10 PM Getting current resource limits.
+Email: 
+Password for 
+02:11 PM Scanning files on local disk.
+Could not guess mimetype for stations/stations.  Using application/octet-stream.
+Could not guess mimetype for stations/stations.sqlite3.  Using application/octet-stream.
+02:11 PM Scanned 500 files.
+02:11 PM Scanned 1000 files.
+02:11 PM Scanned 1500 files.
+02:11 PM Scanned 2000 files.
+02:11 PM Scanned 2500 files.
+02:11 PM Scanned 3000 files.
+02:11 PM Scanned 3500 files.
+02:11 PM Scanned 4000 files.
+02:11 PM Scanned 4500 files.
+02:11 PM Scanned 5000 files.
+02:11 PM Scanned 5500 files.
+02:11 PM Scanned 6000 files.
+02:11 PM Scanned 6500 files.
+02:11 PM Scanned 7000 files.
+02:11 PM Scanned 7500 files.
+02:11 PM Scanned 8000 files.
+02:11 PM Scanned 8500 files.
+02:11 PM Scanned 9000 files.
+02:11 PM Scanned 9500 files.
+02:11 PM Scanned 10000 files.
+02:11 PM Scanned 10500 files.
+02:11 PM Scanned 11000 files.
+02:11 PM Scanned 11500 files.
+02:11 PM Scanned 12000 files.
+02:11 PM Scanned 12500 files.
+02:11 PM Scanned 13000 files.
+02:11 PM Scanned 13500 files.
+02:11 PM Scanned 14000 files.
+02:11 PM Scanned 14500 files.
+02:11 PM Scanned 15000 files.
+02:11 PM Scanned 15500 files.
+02:11 PM Scanned 16000 files.
+Could not guess mimetype for stations/stations.sqlite3.  Using application/octet-stream.
+Could not guess mimetype for stations/stations.  Using application/octet-stream.
+02:11 PM Cloning 16231 static files.
+02:11 PM Cloned 2000 files.
+02:11 PM Cloned 4000 files.
+02:11 PM Cloned 6000 files.
+02:11 PM Cloned 8000 files.
+02:11 PM Cloned 10000 files.
+02:11 PM Cloned 12000 files.
+02:11 PM Cloned 14000 files.
+02:11 PM Cloned 16000 files.
+02:11 PM Cloning 61 application files.
+02:11 PM Uploading 16289 files and blobs.
+02:12 PM Processed 500 out of 16289.
+02:14 PM Processed 1000 out of 16289.
+02:15 PM Processed 1500 out of 16289.
+02:16 PM Processed 2000 out of 16289.
+02:17 PM Processed 2500 out of 16289.
+02:19 PM Processed 3000 out of 16289.
+02:20 PM Processed 3500 out of 16289.
+02:21 PM Processed 4000 out of 16289.
+02:23 PM Processed 4500 out of 16289.
+02:24 PM Processed 5000 out of 16289.
+02:25 PM Processed 5500 out of 16289.
+02:26 PM Processed 6000 out of 16289.
+02:28 PM Processed 6500 out of 16289.
+02:29 PM Processed 7000 out of 16289.
+02:30 PM Processed 7500 out of 16289.
+02:32 PM Processed 8000 out of 16289.
+02:33 PM Processed 8500 out of 16289.
+02:35 PM Processed 9000 out of 16289.
+02:36 PM Processed 9500 out of 16289.
+02:37 PM Processed 10000 out of 16289.
+02:38 PM Rolling back the update.
+Error 400: --- begin server output ---
+Max number of files and blobs is 10000.
+--- end server output ---
+root@
