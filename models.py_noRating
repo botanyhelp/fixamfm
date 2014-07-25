@@ -13,5 +13,4 @@ class Radiorequest(db.Model):
     time = db.DateTimeProperty(auto_now_add=True)
     station = db.ReferenceProperty(Station, collection_name='requests')
     stationCallsign = db.StringProperty(required=True)
-    rating = db.IntegerProperty(required=True, default=5)
 

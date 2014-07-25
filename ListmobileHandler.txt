@@ -1,0 +1,24 @@
+class ListmobileHandler(webapp2.RequestHandler):
+    """ListmobileHandler record maker called
+    """
+    logging.info('ListmobileHandler was called')
+    def get(self):
+        station=self.request.path.split('/')[-1]
+        logging.info('ListmobileHandler.get() station value from URL request.path.split() is')
+        logging.info(station)
+        query = models.Radiorequest.all().filter('stationCallsign =',station).order('-time') 
+        cursor = self.request.get('c', None) 
+        if cursor: 
+            query.with_cursor(cursor) 
+        results = query.fetch(100) 
+        new_cursor = query.cursor() 
+        query.with_cursor(new_cursor) 
+        has_more_results = query.count(1) == 1 
+        #stationUrl = '<a href="/list/'+station+'">'+station+'</a>'
+        template = template_env.get_template('resultsmobile.html') 
+        context = { 'results': results, }
+        context['stationUrl'] = stationUrl
+        context['station'] = station
+        if has_more_results: 
+            context['next_cursor'] = new_cursor 
+        self.response.out.write(template.render(context))

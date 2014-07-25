@@ -11,7 +11,7 @@ handlers:
   static_dir: images
 - url: /loaders/.*
   script: loaders.application
-  login: admin
+  login: required
 - url: .*
   script: main.application
 

@@ -1,0 +1,10 @@
+{% block bodycontent %}
+{% if results %}
+{{station}} Requests
+{% for result in results %}
+  {{ result.request }}: {{ result.time}}
+{% endfor %}
+{% else %}
+There are no requests.
+{% endif %}
+{% endblock %}
