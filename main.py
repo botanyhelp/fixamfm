@@ -295,7 +295,23 @@ class AddHandler(webapp2.RequestHandler):
             logging.info('AddHandler got mobile request')
             captcha_text_entered='row'
             captcha_index=11291
-        if(self.images.index(captcha_text_entered)==captcha_index):
+
+
+
+        #WORKS, but crashes if the user types a non existent letter sequence.
+        # Our array should have every three letter combination and the HTML
+        # <input> widget should limit to 3 characters.  But SH*t happens and
+        # a robot could disobey the three char limit.  And so we'll try
+        # except this this thing instead:
+        #if(self.images.index(captcha_text_entered)==captcha_index):
+        #INSTEAD, SAFER WITH TRY CATCH:
+        captcha_text_entered_index = 11291
+        try:
+            captcha_text_entered_index = self.images.index(captcha_text_entered)
+        except:
+            logging.info('self.images.index(captcha_text_entered) failed with'+captcha_text_entered)
+
+        if(captcha_text_entered_index==captcha_index):
             logging.info('user passed captcha test')
             #WORKS..but it doesn't lowercase
             #radioRequest=self.profanityFilter(unicode(lxml.html.fromstring(self.request.get('request')).text_content()))
@@ -425,10 +441,10 @@ class RadiorequestHandler(webapp2.RequestHandler):
         <form action="/add" method="GET">
         station <input type="text" name="station" value="'''
         addrequesthtml += station
-        addrequesthtml += '''"><br />request <input type="text" name="request"><br />
+        addrequesthtml += '''"><br />request <textarea name="request" rows="10" columns="50" maxlength="480">Be nice</textarea><br />
         Type 3 letters:<img src="/images/'''
         addrequesthtml += imgString
-        addrequesthtml += '''"><input type="text" name="cap" size="3"><input type="hidden" name="captcha" value="'''
+        addrequesthtml += '''"><input type="text" name="cap" size="3" maxlength="3"><input type="hidden" name="captcha" value="'''
         addrequesthtml += str(captcha)
         addrequesthtml += '''"><br />
         <input type="submit" value="Add Request"><br />
